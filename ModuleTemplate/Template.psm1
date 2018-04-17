@@ -1,5 +1,5 @@
 Get-ChildItem -path $PSScriptRoot -Recurse | Unblock-File
-Get-ChildItem -Path $PSScriptRoot -Filter '*.ps1' -Exclude '*.ps1xml' -Recurse | foreach { . $_.FullName}
+Get-ChildItem -Path $PSScriptRoot -Filter '*.ps1' -Exclude '*.ps1xml' -Recurse | ForEach-Object { . $_.FullName}
 
 Export-ModuleMember -Function * -Cmdlet * -Variable * -Alias *
 
